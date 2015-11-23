@@ -75,7 +75,8 @@ class NotifyMagic(ExecutionMagics):
         sessions = json.loads(link.read().decode('utf8'))
         for sess in sessions:
             if sess['kernel']['id'] == kernel_id:
-                nb_name = sess['notebook']['path']
+                nb_relative_path = sess['notebook']['path']
+                nb_name = os.path.basename(nb_relative_path)
                 break
 
         platform_str = platform.system()
