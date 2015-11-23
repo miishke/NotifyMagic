@@ -27,6 +27,8 @@ When running Linux, the extension depends on libnotify. On Debian based distros 
 
     sudo apt-get install libnotify4 libnotify-bin
 
+On Apple hardware, OS X Mavericks version 10.9 or higher is required.
+
 The extension assumes Jupyter notebook kernel is running on localhost and port 8888.
 
 ## License
